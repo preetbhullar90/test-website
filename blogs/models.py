@@ -1,7 +1,7 @@
 """ All import from django """
 from django.db import models
 from django.utils.text import slugify
-from cloudinary.models import CloudinaryField
+#from cloudinary.models import CloudinaryField
 
 
 class Meals(models.Model):
@@ -11,7 +11,7 @@ class Meals(models.Model):
     category = models.ForeignKey('Category', on_delete=models.SET_NULL, null=True)
     people = models.IntegerField()
     price = models.DecimalField(max_length=5, decimal_places=2, max_digits=5)
-    image = CloudinaryField('image', default='placeholder')
+    image = models.ImageField(upload_to='blogs/')
     slug = models.SlugField(blank=True, null=True)
 
     def save(self, *args, **kwargs):
