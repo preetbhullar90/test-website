@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+    <!-- ======= Menu Section ======= -->
+
+
+            <!-- <img class="image" src="{{ meal_detail.image.url }}" alt="">
+            <h2 class="imagess">{{ meal_detail }}</h2>
+            <p>{{ meal_detail.description }}</p>
+            <p>People :{{meal_detail.people}}</p>
+            <p>Price :{{meal_detail.price }}</p> -->
+
+
+
+
+            <section id="menu" class="menu section-bg">
+
+                <div class="container" data-aos="fade-up">
+                  <div class="section-title">
+                    <h2>Food Detail</h2>
+                    <p>{{ meal_detail }}</p>
+
+                  </div>
+
+
+
+                  <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="d-flex justify-content-center">
+
+                        <img class="image col-lg-7" src="{{ meal_detail.image.url }}" alt="">
+
+                    </div>
+                    <div class="text justify-content-center ">
+                    <h2>{{ meal_detail }}</h2>
+                    <p>{{ meal_detail.description }}</p>
+                    <p>For : {{meal_detail.people}} People</p>
+                    <p>Price : £{{meal_detail.price }}</p>
+                </div>
+                </div>
+            </div>
+              </section><!-- End Menu Section -->
+
+{% endblock content %}
