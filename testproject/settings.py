@@ -41,10 +41,10 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'cloudinary_storage',
+    #'cloudinary_storage',
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
-    'cloudinary',
+    #'cloudinary',
     'blogs',
 ]
 

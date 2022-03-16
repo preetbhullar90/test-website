@@ -1,7 +1,7 @@
 """ All import from django """
 from django.db import models
 from django.utils.text import slugify
-from cloudinary.models import CloudinaryField
+#from cloudinary.models import CloudinaryField
 
 
 class Meals(models.Model):
