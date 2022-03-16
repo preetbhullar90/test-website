@@ -22,4 +22,3 @@ urlpatterns = [
     path('', include('blogs.urls', namespace='blogs')),
 
 ]
-
