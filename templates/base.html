@@ -3,227 +3,189 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Grow Restaurant and Cafe's website, where you can find our current menus & make reservations.">
+    <title>GROW Restaurant & Cafe</title>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'favicon/manifest.json' %}">
 
-  <title>Restaurantly Bootstrap Template - Index</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+    <!-- JQuery -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css">
 
-  <!-- Favicons -->
-  <link href="{% static 'img/favicon.png'%}" rel="icon">
-  <link href="{% static 'img/apple-touch-icon.png'%}" rel="apple-touch-icon">
- 
- 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous" />
-  <!-- Vendor CSS Files -->
-  <link href="{% static 'vendor/animate.css/animate.min.css'%}" rel="stylesheet">
-  <link href="{% static 'vendor/aos/aos.css'%}" rel="stylesheet">
-  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
-  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css'%}" rel="stylesheet">
-  <link href="{% static 'vendor/boxicons/css/boxicons.min.css'%}" rel="stylesheet">
-  <link href="{% static 'vendor/glightbox/css/glightbox.min.css'%}" rel="stylesheet">
-  <link href="{% static 'vendor/swiper/swiper-bundle.min.css'%}" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
-  <!-- Template Main CSS File -->
-  <link rel="stylesheet" href="{% static '/css/style.css' %}">
- 
+    <!-- Animate for heading & forms -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
-  <!-- =======================================================
-  * Template Name: Restaurantly - v3.1.0
-  * Template URL: https://bootstrapmade.com/restaurantly-restaurant-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
-  <!-- <script src="https://code.jquery.com/jquery-1.8.2.js"></script>
-  <script src="https://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
-   -->
-  
-  
+    <!-- Personal CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <!-- JQuery for datepicker -->
+    <script src="https://code.jquery.com/jquery-1.8.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
 </head>
 
 <body>
-
-  <!-- ======= Top Bar ======= -->
-  <div id="topbar" class="d-flex align-items-center fixed-top">
-    <div class="container d-flex justify-content-center justify-content-md-between">
-
-      <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-phone d-flex align-items-center"><span>+1 5589 55488 55</span></i>
-        <i class="bi bi-clock d-flex align-items-center ms-4"><span> Mon-Sat: 11AM - 23PM</span></i>
-      </div>
-
-    
-    </div>
-  </div>
-
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top d-flex align-items-cente">
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
-
-      <h1 class="logo me-auto me-lg-0"><a href="#">Restaurantly</a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
-      <nav id="navbar" class="navbar order-last order-lg-0 ">
-        <ul>
-          <li><a class="nav-link scrollto" href="#">Home</a></li>
-          <li><a class="nav-link scrollto" href="#">About</a></li>
-          <li><a class="nav-link scrollto" href="{% url 'blogs:meal_list' %}">Menu</a></li>
-          <li><a class="nav-link scrollto" href="#">Your booking</a></li>
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
+    <div class="container-fluid p-0">
+        <!-- Navbar -->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark green-bground" id="main-nav">
+            <a class="navbar-brand brand-text" href="#" id="nav-heading">GROW</a>
+            <!-- Collapsible icon for smaller screens -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item light-text green-bground">
+                        <!-- Display different style if link is active -->
+                        <a class="nav-link {% if request.resolver_match.url_name == 'index' %}
+                        green-text {% else %} text-white {% endif %}" href="#">Home</a>
+                    </li>
+                    <li class="nav-item dropdown green-bground">
+                        <a class="nav-link dropdown-toggle {% if request.resolver_match.url_name == 'menus' %}
+                        green-text {% else %} text-white {% endif %}" href="#" id="navbarDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Menus
+                        </a>
+                        <!-- Dropdown for the different menus options -->
+                        <ul class="dropdown-menu green-bground" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item {% if request.resolver_match.url_name == 'food_menu' %}
+                                green-text {% else %} text-white {% endif %}" href="#">Food</a>
+                            </li>
+                            <li><a class="dropdown-item  {% if request.resolver_match.url_name == 'drinks_menu' %}
+                                green-text {% else %} text-white {% endif %}" href="#">Drinks</a>
+                            </li>
+                            <li>
+                        </ul>
+                    </li>
+                    <li class="nav-item green-bground">
+                        <a class="nav-link {% if request.resolver_match.url_name == 'reservations' %}
+                        green-text {% else %} text-white {% endif %}" href="#">Reservations</a>
+                    </li>
+                    <li class="nav-item green-bground">
+                        <a class="nav-link {% if request.resolver_match.url_name == 'contact_us' %}
+                        green-text {% else %} text-white {% endif %}" href="#">Contact Us</a>
+                    </li>
                 </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li>
-          <li><a class="nav-link scrollto" href="#">Contact</a></li>
-          {% if user.is_authenticated %}
-          <span class="nav-link scrollto">Hello, {{request.user}}</span>
-          <li><a class="nav-link scrollto" href="#">Logout</a></li>
-          {% else %}
-          <li><a class="nav-link scrollto" href="#">Login</a></li>
-          <li><a class="nav-link scrollto" href="{#">Register</a></li>
-          {% endif %}
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-      <a href="#" class="book-a-table-btn scrollto d-none d-lg-flex">Book a table</a>
-
-    </div>
-  </header><!-- End Header -->
-
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center">
-    <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
-      <div class="row">
-        <div class="col-lg-8">
-          <h1>Welcome to <span>Restaurantly</span></h1>
-          <h2>Delivering great food for more than 18 years!</h2>
-
-          <div class="btns">
-            <a href="#" class="btn-menu animated fadeInUp scrollto">Our Menu</a>
-            <a href="#" class="btn-book animated fadeInUp scrollto">Book a Table</a>
-          </div>
-        </div>
-        <div class="col-lg-4 d-flex align-items-center justify-content-center position-relative" data-aos="zoom-in" data-aos-delay="200">
-          <a href="https://www.youtube.com/watch?v=7EdpBH81XIY" class="glightbox play-btn"></a>
-        </div>
-
-      </div>
-    </div>
-  </section><!-- End Hero -->
-  
-  <main id="main">
-
-  
-    {% block content %}
-
-    {% endblock content %}
-      
-   
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6">
-            <div class="footer-info">
-              <h3>Restaurantly</h3>
-              <p>
-                A108 Adam Street <br>
-                NY 535022, USA<br><br>
-                <strong>Phone:</strong> +1 5589 55488 55<br>
-                <strong>Email:</strong> info@example.com<br>
-              </p>
-              <div class="social-links mt-3">
-                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-              </div>
+                <ul class="navbar-nav">
+                   
+                </ul>
             </div>
-          </div>
 
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Menu</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Contact</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Book a table</a></li>
-            </ul>
-          </div>
+        </nav>
 
-        
+        <!-- Header -->
+        <header class="py-5 bg-image-full">
+            <div class="text-center mt-5" id="main-heading">
+                <h1 class="text-white fs-3 brand-text">GROW</h1>
+                <p class="text-white mb-0 fw-bolder">Restaurant & Cafe</p>
+            </div>
+        </header>
 
-          <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-           
-
-          </div>
-
+        <!-- Messages/Alerts -->
+        <div class="container">
+            <div class="row mt-3">
+                <div class="col-md-8 offset-md-2 text-center">
+                    {% for message in messages %}
+                    <div class="alert {{ message.tags }} alert dismissable fade show" id="msg" role="alert">
+                        {{ message | safe }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                        </button>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
         </div>
-      </div>
+        {% block content%}
+
+        {% endblock %}
+
+        <!-- Footer  https://mdbootstrap.com/docs/b4/jquery/navigation/footer/ -->
+        <footer class="page-footer font-small text-center green-bground" id="main-footer">
+            <!-- Footer Elements -->
+            <div class="container">
+                <div class="row d-flex justify-content-around">
+                    <div class="col-sm-8 col-md-6 col-lg-4 mt-4 pb-2 pink-bground" id="opening-hours">
+                        <!-- Opening hours section of footer -->
+                        <h4 class="brand-text mt-2"><strong>Opening Hours</strong></h4>
+                        <div class="center">
+                            <p>Mon - Fri: 7am-10pm <br>
+                                Sun: 8am - 8pm <br>
+                                <strong>Bank Holidays: </strong> Closed</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-8 col-md-6 col-lg-4 mt-4 pb-2 pink-bground" id="map-section">
+                        <!-- Map section of footer to be hidden on mobiles -->
+                        <h4 class="brand-text mt-2"><strong>Find us!</strong></h4>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2479.7975206891574!2d-0.12180388407318832!3d51.571945313802374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761bbdc399e54f%3A0x73cee8db4e0f4e96!2sCrouch%20Hill%2C%20London%20N4%204AJ!5e0!3m2!1sen!2suk!4v1641838016037!5m2!1sen!2suk"
+                            width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    <!-- Contact information section of footer -->
+                    <div class="col-sm-8 col-lg-4 mt-4 pb-2 pink-bground" id="contact-section">
+                        <h4 class="footer-heading brand-text mt-2"><strong>Stay In Touch</strong></h4>
+                        <div class="center">
+                            <p><a href="#" class="contact-link">Send us a message!</a><br>
+                                12 Crouch Hill, London N4 4AJ <br>
+                                Phone: <span class="contact-link">02076841002</span></p>
+                        </div>
+                        <div class="mb-2 flex-center">
+                            <!-- Social media links -->
+                            <!-- Facebook -->
+                            <a class="ic" href="https://www.facebook.com/"
+                                aria-label="Take a look at our facebook, opens in a new tab" target="_blank"
+                                rel="noreferrer">
+                                <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                            </a>
+                            <!-- Twitter -->
+                            <a class="ic" href="https://twitter.com/?lang=en"
+                                aria-label="Take a look at our twitter, opens in a new tab" target="_blank"
+                                rel="noreferrer">
+                                <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                            </a>
+                            <!--Instagram-->
+                            <a class="ic" href="https://www.instagram.com/"
+                                aria-label="Take a look at our instagram, opens in a new tab" target="_blank"
+                                rel="noreferrer">
+                                <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="footer-copyright text-center green-bground py-3">© 2022 Copyright:
+                <h4><span class="brand-text">GROW</span></h4>
+            </div>
+
+        </footer>
     </div>
+    <!-- Footer -->
 
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>Restaurantly</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/restaurantly-restaurant-template/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-    </div>
-  </footer><!-- End Footer -->
-
-  <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="{% static 'vendor/aos/aos.js'%}"></script>
-  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
-  <script src="{% static 'vendor/glightbox/js/glightbox.min.js'%}"></script>
-  <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js'%}"></script>
-  <script src="{% static 'vendor/php-email-form/validate.js'%}"></script>
-  <script src="{% static 'vendor/swiper/swiper-bundle.min.js'%}"></script>
-
-  <!-- Template Main JS File -->
-  <script src="{% static 'js/main.js'%}"></script>
-  <script src="{% static 'js/booking.js'%}"></script>
-  <script src="{% static 'js/update.js'%}"></script>
-  <script src="{% static 'js/contact.js'%}"></script>
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/ad6c696766.js" crossorigin="anonymous" defer></script>
 
 
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"
+        defer>
+    </script>
 
-
-
-
-
+    <!-- Personal JS -->
+    <script src="{% static 'js/script.js' %}"></script>
 </body>
 
 </html>
